@@ -1,0 +1,128 @@
+object Form3: TForm3
+  Left = 0
+  Top = 0
+  Caption = 'PRODUTOS'
+  ClientHeight = 480
+  ClientWidth = 421
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 2
+    Top = 248
+    Width = 445
+    Height = 238
+  end
+  object Label2: TLabel
+    Left = 16
+    Top = 256
+    Width = 78
+    Height = 13
+    Caption = 'COD. PRODUTO'
+    FocusControl = DBEdit1
+  end
+  object Label3: TLabel
+    Left = 16
+    Top = 314
+    Width = 59
+    Height = 13
+    Caption = 'DESCRICAO'
+    FocusControl = DBEdit2
+  end
+  object Label4: TLabel
+    Left = 16
+    Top = 376
+    Width = 66
+    Height = 13
+    Caption = 'QUANTIDADE'
+    FocusControl = DBEdit3
+  end
+  object Label5: TLabel
+    Left = 211
+    Top = 376
+    Width = 60
+    Height = 13
+    Caption = 'UN. MEDIDA'
+    FocusControl = DBEdit4
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 2
+    Top = 8
+    Width = 405
+    Height = 41
+    DataSource = DataSource1
+    VisibleButtons = [nbPrior, nbInsert, nbDelete, nbEdit, nbRefresh]
+    TabOrder = 0
+  end
+  object DBGrid1: TDBGrid
+    Left = 2
+    Top = 55
+    Width = 407
+    Height = 178
+    DataSource = DataSource1
+    ReadOnly = True
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object DBEdit1: TDBEdit
+    Left = 16
+    Top = 272
+    Width = 134
+    Height = 21
+    DataField = 'COD_PROD'
+    DataSource = DataSource1
+    TabOrder = 2
+  end
+  object DBEdit2: TDBEdit
+    Left = 16
+    Top = 333
+    Width = 264
+    Height = 21
+    DataField = 'DESCRICAO'
+    DataSource = DataSource1
+    TabOrder = 3
+  end
+  object DBEdit3: TDBEdit
+    Left = 16
+    Top = 395
+    Width = 134
+    Height = 21
+    DataField = 'QTD'
+    DataSource = DataSource1
+    TabOrder = 4
+  end
+  object DBEdit4: TDBEdit
+    Left = 211
+    Top = 395
+    Width = 69
+    Height = 21
+    DataField = 'UN_MEDIDA'
+    DataSource = DataSource1
+    TabOrder = 5
+  end
+  object BitBtn1: TBitBtn
+    Left = 300
+    Top = 432
+    Width = 99
+    Height = 33
+    Caption = 'VOLTAR'
+    TabOrder = 6
+    OnClick = BitBtn1Click
+  end
+  object DataSource1: TDataSource
+    DataSet = DataModule2.ADODataSet1
+    Left = 216
+    Top = 256
+  end
+end

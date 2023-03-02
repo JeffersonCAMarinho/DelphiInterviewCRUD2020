@@ -1,0 +1,139 @@
+object DataModule2: TDataModule2
+  OldCreateOrder = False
+  Height = 429
+  Width = 571
+  object ADOConnection1: TADOConnection
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
+      'fo=False;Initial Catalog=grandp;Data Source=LAPTOP-LO7488OT\SQLE' +
+      'XPRESS;'
+    LoginPrompt = False
+    Provider = 'SQLOLEDB.1'
+    Left = 32
+    Top = 32
+  end
+  object ADODataSet1: TADODataSet
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    CommandText = 'select * from PRODUTOS'
+    Parameters = <>
+    Left = 192
+    Top = 40
+    object ADODataSet1COD_PROD: TIntegerField
+      DisplayWidth = 10
+      FieldName = 'COD_PROD'
+    end
+    object ADODataSet1DESCRICAO: TStringField
+      DisplayWidth = 23
+      FieldName = 'DESCRICAO'
+    end
+    object ADODataSet1QTD: TIntegerField
+      DisplayWidth = 15
+      FieldName = 'QTD'
+    end
+    object ADODataSet1UN_MEDIDA: TStringField
+      DisplayWidth = 9
+      FieldName = 'UN_MEDIDA'
+      Size = 5
+    end
+  end
+  object ADOTable1: TADOTable
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'PRODUTOS'
+    Left = 32
+    Top = 88
+    object ADOTable1COD_CLI: TIntegerField
+      DisplayWidth = 10
+      FieldName = 'COD_CLI'
+    end
+    object ADOTable1NOME: TStringField
+      DisplayWidth = 26
+      FieldName = 'NOME'
+    end
+    object ADOTable1SOBRENOME: TStringField
+      DisplayWidth = 29
+      FieldName = 'SOBRENOME'
+    end
+  end
+  object ADODataSet2: TADODataSet
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    CommandText = 'select * from VENDA_ITENS'
+    Parameters = <>
+    Left = 192
+    Top = 104
+    object ADODataSet2COD_VEND_IT: TIntegerField
+      FieldName = 'COD_VEND_IT'
+    end
+    object ADODataSet2COD_PROD: TIntegerField
+      FieldName = 'COD_PROD'
+    end
+    object ADODataSet2DESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+    end
+    object ADODataSet2VALOR: TFloatField
+      FieldName = 'VALOR'
+    end
+    object ADODataSet2QTD: TIntegerField
+      FieldName = 'QTD'
+    end
+    object ADODataSet2DATA: TWideStringField
+      FieldName = 'DATA'
+      Size = 10
+    end
+  end
+  object ADODataSet3: TADODataSet
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    CommandText = 'select * from VENDAS'
+    Parameters = <>
+    Left = 192
+    Top = 176
+    object ADODataSet3COD_VEND: TIntegerField
+      DisplayWidth = 10
+      FieldName = 'COD_VEND'
+    end
+    object ADODataSet3COD_PROD: TIntegerField
+      DisplayWidth = 10
+      FieldName = 'COD_PROD'
+    end
+    object ADODataSet3DESCRICAO: TStringField
+      DisplayWidth = 20
+      FieldName = 'DESCRICAO'
+    end
+    object ADODataSet3VALOR: TFloatField
+      DisplayWidth = 11
+      FieldName = 'VALOR'
+    end
+    object ADODataSet3QTD: TIntegerField
+      DisplayWidth = 10
+      FieldName = 'QTD'
+    end
+    object ADODataSet3DATA: TWideStringField
+      DisplayWidth = 10
+      FieldName = 'DATA'
+      Size = 10
+    end
+  end
+  object ADODataSet4: TADODataSet
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    CommandText = 'select * from CLIENTE'
+    Parameters = <>
+    Left = 192
+    Top = 248
+    object ADODataSet4COD_CLI: TIntegerField
+      DisplayWidth = 10
+      FieldName = 'COD_CLI'
+    end
+    object ADODataSet4NOME: TStringField
+      DisplayWidth = 23
+      FieldName = 'NOME'
+    end
+    object ADODataSet4SOBRENOME: TStringField
+      DisplayWidth = 20
+      FieldName = 'SOBRENOME'
+    end
+  end
+end
